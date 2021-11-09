@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/VDesign/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/VDesign/static/js/main.46eda86d.chunk.js",
+    "main.js.map": "/VDesign/static/js/main.46eda86d.chunk.js.map",
+    "runtime-main.js": "/VDesign/static/js/runtime-main.08f7d4f3.js",
+    "runtime-main.js.map": "/VDesign/static/js/runtime-main.08f7d4f3.js.map",
+    "static/js/2.9a08d144.chunk.js": "/VDesign/static/js/2.9a08d144.chunk.js",
+    "static/js/2.9a08d144.chunk.js.map": "/VDesign/static/js/2.9a08d144.chunk.js.map",
+    "static/js/3.269776f9.chunk.js": "/VDesign/static/js/3.269776f9.chunk.js",
+    "static/js/3.269776f9.chunk.js.map": "/VDesign/static/js/3.269776f9.chunk.js.map",
+    "index.html": "/VDesign/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/VDesign/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.9a08d144.chunk.js.LICENSE.txt": "/VDesign/static/js/2.9a08d144.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/VDesign/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08f7d4f3.js",
+    "static/js/2.9a08d144.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.46eda86d.chunk.js"
+  ]
+}
