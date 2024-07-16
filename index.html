@@ -13,13 +13,13 @@
         <link href='./assets/css/style.css' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='../assets/img/icons/favicon.svg'>
 
-        <script src="./assets/js/main.js" defer></script>
+        <script src='./assets/js/main.js' defer></script>
 
     </head>
-    <body>
+    <body class='d-flex flex-column vh-100'>
         <header class='coontainer-fluid row m-0 p-4'>
             <div class='col-4'>
-                <button type="button" id="toggle-nav">
+                <button type='button' id='toggle-nav'>
                     <img src='./assets/img/icons/HamburgerMenu.svg' alt='Toggle menu visibility'>
                 </button>
             </div>
@@ -32,9 +32,9 @@
 
 
             <nav class='main-navigation col-3 d-flex flex-column align-items-center gap-4 p-4'>
-                <div class="container-fluid row text-center gap-3">
+                <div class='container-fluid row text-center gap-3'>
                     <h2 class='brand-name'>VDesign</h2>
-                    <div class="main-navigation-divider"></div>
+                    <div class='main-navigation-divider'></div>
                 </div>
                 <ul class='main-navigation-list text-center d-flex flex-column gap-4 p-0'>
                     <li class='p-2 main-navigation-list-item'>
@@ -54,86 +54,156 @@
                     </li>
                 </ul>
             </nav>
-            <div class="main-navigation-backdrop"></div>
+            <div class='main-navigation-backdrop'></div>
         </header>
 
-        <div class='page'>
-            <section id='section-hero' class='hero-landing'>
-                <h2>Welcome to VDesign! I am Edoardo!</h2> 
-                <p>A passionate frontend developer and more!</p>
-                <a href='#section-projects'>
-                    <img src='./assets/img/icons/ArrowDown.svg' alt='Down arrow icon'>
-                </a>
-            </section>
-
-            <section id='section-projects'>
-                <h2>See some of my projects!</h2> 
-                <a href='https://github.com/edoardovicenzi'>
-                    <img src='./assets/img/icons/ArrowRight.svg' alt='Righ arrow icon'>
-                </a>
-                <p>Most of them are on github <a href='https://github.com/edoardovicenzi'>check them out</a>!</p>
-            </section>
-
-            <section id='section-skills'>
-                <h2>My professional skills?</h2> 
-                <div class='subsection' id='professional-skills'>
-                    <h3 class='subsection-heading'>Checkout the programming languages I use!</h3>
-                    <div class='subsection-body'>
-                        <div class='subsection-body-mask'></div>
-                        <div class='subsection-body-list'>
-                            <img src='./assets/img/icons/Python.svg' alt='Python Icon'>
-                            <img src='./assets/img/icons/Rust.svg' alt='Rust Icon'>
-                            <img src='./assets/img/icons/HTML.svg' alt='HTML Icon'>
-                            <img src='./assets/img/icons/CSS.svg' alt='CSS Icon'>
-                            <img src='./assets/img/icons/JS.svg' alt='JS Icon'>
-                            <img src='./assets/img/icons/VB.svg' alt='VB Icon'>
-                            <img src='./assets/img/icons/DOTNet.svg' alt='DOTNet Icon'>
-                        </div>
-                    </div>
+        <div class='page h-100'>
+            <section id='section-hero' class='hero-landing h-100'>
+                <div class='section-heading row'>
+                    <div class='col-2'></div>
+                    <h2 class='col-6 text-wrap'>Welcome to VDesign! I am Edoardo!</h2> 
                 </div>
-
-                <div class='subsection' id='frameworks'>
-                    <h3 class='subsection-heading'>Frameworks and libraries? I got you covered!</h3>
-                    <div class='subsection-body'>
-                        <div class='subsection-body-mask'></div>
-                        <div class='subsection-body-list'>
-                            <img src='./assets/img/icons/Vue.svg' alt='Vue Icon'>
-                            <img src='./assets/img/icons/JQuery.svg' alt='JQuery Icon'>
-                            <img src='./assets/img/icons/React.svg' alt='React Icon'>
-                            <img src='./assets/img/icons/Sass.svg' alt='Sass Icon'>
-                            <img src='./assets/img/icons/Bootstrap.svg' alt='Bootstrap Icon'>
-                        </div>
-                    </div>
-                </div>
-                <div class='subsection' id='dev-tools'>
-                    <h3 class='subsection-heading'>Checkout my daily dev tools!</h3>
-                    <div class='subsection-body'>
-                        <div class='subsection-body-mask'></div>
-                        <div class='subsection-body-list'>
-                            <img src='./assets/img/icons/Figma.svg' alt='Figma Icon'>
-                            <img src='./assets/img/icons/Nvim.svg' alt='Nvim Icon'>
-                            <img src='./assets/img/icons/VSCode.svg' alt='VSCode Icon'>
-                            <img src='./assets/img/icons/Obsidian.svg' alt='Obsidian Icon'>
-                        </div>
+                <div class='row align-items-center'>
+                    <div class='col-5'></div>
+                    <p class='m-0 text-wrap col-5'>A passionate frontend developer and more!</p>
+                    <div class='col-2 d-flex'>
+                        <a href='#section-projects' class='anchor-control d-flex'>
+                            <img src='./assets/img/icons/ArrowDown.svg' alt='Down arrow icon'>
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section id='section-contacts'>
-                <h2>Contact me!</h2>
-                <div class='subsection' id='socials'>
-                    <h3 class='subsection-heading'>On my socials!</h3>
-                    <div class='subsection-body'>
+            <section id='section-projects' class='h-100'>
+                <div class='section-heading row align-items-center'>
+                    <div class='col-3'></div>
+                    <div class='col-7'>
+                        <h2>See some of my projects!</h2> 
+                    </div>
+                    <div class='col-2 d-flex'>
+                        <a href='https://github.com/edoardovicenzi' target='_blank' class='anchor-control d-flex'>
+                            <img src='./assets/img/icons/ArrowRight.svg' alt='Righ arrow icon'>
+                        </a>
+                    </div>
+                </div>
+                <div class='row align-items-center justify-content-center'>
+                    <p class='text-wrap col-8 text-center'>Most of them are on github <a href='https://github.com/edoardovicenzi' target='target='_blank'' class='anchor-inline-text'>check them out</a>!</p>
+                </div>
+            </section>
+
+
+            <section id='section-skills' class='h-100'>
+
+                <div class='section-heading row justify-content-center'>
+                    <div class='col-10'>
+                        <h2 class='text-center text-wrap'>My professional skills?</h2> 
+                    </div>
+                </div>
+
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='professional-skills'>
+                    <div class='row justify-content-center'>
+                        <p class='subsection-heading col-8 text-center'>Checkout the programming languages I use!</p>
+                    </div>
+                    <div class='subsection-body px-5'>
                         <div class='subsection-body-mask'></div>
-                        <div class='subsection-body-list'>
-                            <img src='./assets/img/icons/Github.svg' alt='Github Icon'>
-                            <img src='./assets/img/icons/Linkdn.svg' alt='Linkdn Icon'>
+                        <div class='subsection-body-list d-flex gap-4'>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Python.svg' alt='Python Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Rust.svg' alt='Rust Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/HTML.svg' alt='HTML Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/CSS.svg' alt='CSS Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/JS.svg' alt='JS Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/VB.svg' alt='VB Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/DOTNet.svg' alt='DOTNet Icon'>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <div class='subsection' id='resume'>
-                    <h3 class='subsection-heading'>Checkout my CV / Resume!</h3>
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='frameworks'>
+                    <div class='row justify-content-center'>
+                        <p class='subsection-heading col-8 text-center'>Frameworks and libraries? I got you covered!</p>
+                    </div>
+                    <div class='subsection-body px-5'>
+                        <div class='subsection-body-mask'></div>
+                        <div class='subsection-body-list d-flex gap-4'>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Vue.svg' alt='Vue Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/JQuery.svg' alt='JQuery Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/React.svg' alt='React Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Sass.svg' alt='Sass Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Bootstrap.svg' alt='Bootstrap Icon'>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='dev-tools'>
+                    <div class='row justify-content-center'>
+                        <p class='subsection-heading'>My daily dev tools!</p>
+                    </div>
+                    <div class='subsection-body px-5'>
+                        <div class='subsection-body-mask'></div>
+                        <div class='subsection-body-list d-flex gap-4'>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Figma.svg' alt='Figma Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Nvim.svg' alt='Nvim Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/VSCode.svg' alt='VSCode Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Obsidian.svg' alt='Obsidian Icon'>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id='section-contacts' class='h-100'>
+                <div class='section-heading row justify-content-center'>
+                    <div class='col'>
+                        <h2 class='text-center text-wrap'>Contact me!</h2>
+                    </div>
+                </div>
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='socials'>
+                    <p class='subsection-heading'>On my socials!</p>
+                    <div class='subsection-body px-5'>
+                        <div class='subsection-body-mask'></div>
+                        <div class='subsection-body-list d-flex gap-4'>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Github.svg' alt='Github Icon'>
+                            </a>
+                            <a href='' target='_blank'>
+                                <img src='./assets/img/icons/Linkdn.svg' alt='Linkdn Icon'>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='resume'>
+                    <p class='subsection-heading'>Checkout my CV / Resume!</p>
                     <div class='subsection-body'>
                         <a href='./assets/blob/EN_Curriculum_vitae.pdf' download='Edoardo_Vicenzi_CV_Resume.pdf'>
                             <button type='button' class='btn btn-outline'>DOWNLOAD NOW</button>
@@ -141,8 +211,8 @@
                     </div>
                 </div>
 
-                <div class='subsection' id='email'>
-                    <h3 class='subsection-heading'>Prefer the email?</h3>
+                <div class='subsection container-fluid d-flex flex-column align-items-center' id='email'>
+                    <p class='subsection-heading'>Prefer the email?</p>
                     <div class='subsection-body'>
                         <a href='./contacts/'>
                             <button type='button' class='btn btn-outline'>SEND ME AN EMAIL</button>
