@@ -1,0 +1,83 @@
+[
+    {
+        "name": "python",
+        "url": "https://www.python.org/"
+    },
+    {
+        "name": "rust",
+        "url": "https://www.rust-lang.org/"
+    },
+    {
+        "name": "html",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+        "name": "css",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+        "name": "js",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+        "name": "vb",
+        "url": "https://learn.microsoft.com/en-us/dotnet/visual-basic/"
+    },
+    {
+        "name": "dotnet",
+        "url": "https://dotnet.microsoft.com/en-us/"
+    },
+    {
+        "name": "vue",
+        "url": "https://vuejs.org/"
+    },
+    {
+        "name": "jquery",
+        "url": "https://jquery.com/"
+    },
+    {
+        "name": "react",
+        "url": "https://react.dev/"
+    },
+    {
+        "name": "sass",
+        "url": "https://sass-lang.com/"
+    },
+    {
+        "name": "bootstrap",
+        "url": "https://getbootstrap.com/"
+    },
+    {
+        "name": "figma",
+        "url": "https://www.figma.com"
+    },
+    {
+        "name": "nvim",
+        "url": "https://neovim.io"
+    },
+    {
+        "name": "vscode",
+        "url": "https://code.visualstudio.com"
+    },
+    {
+        "name": "vs",
+        "url": "https://visualstudio.microsoft.com/"
+    },
+    {
+        "name": "obsidian",
+        "url": "https://obsidian.md"
+    },
+    {
+        "name": "svn",
+        "url": "https://tortoisesvn.net"
+    },
+    {
+        "name": "github",
+        "url": "https://github.com/edoardovicenzi"
+    },
+    {
+        "name": "linkdn",
+        "url": "https://www.linkedin.com/in/edoardo-vicenzi-3b530b183/"
+    }
+
+]

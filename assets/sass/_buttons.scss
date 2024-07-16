@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  
+  &-outline{
+    border: 1px solid $primary;
+    color: $primary;
+    transition: 0.2s;
+
+    &:hover{
+      background-color: $primary;
+      color: $black;
+    }
+  }
+}

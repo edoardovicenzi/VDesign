@@ -1,0 +1,77 @@
+@use 'variables' as *;
+@use 'functions' as *;
+
+
+.page{
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+
+section{
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.subsection{
+
+  &-body{
+    position: relative;
+    width: max-content;
+
+    &-mask{
+      position: absolute;
+      inset:0;
+      pointer-events: none;
+      background-image: linear-gradient( to right, $black , rgba($primary, 0), $black);
+    }
+
+    &-list{
+
+      & a{
+        transition: 0.2s;
+
+        &:hover{
+          scale: 2;
+        }
+      }
+    }
+  }
+}
+
+.under{
+  &-construction{
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    aspect-ratio: 1;
+    background: url('../img/sprites/under-construction.svg');
+    animation-name: hammer-anvil;
+    animation-duration: 1.2s;
+    animation-timing-function: steps(11);
+    animation-iteration-count: infinite;
+    scale: 0.5;
+
+    &::after{
+      content: 'This page is currently under construction!';
+      position: absolute;
+      top: 100%;
+      margin: 2rem 0;
+      @include addFontStyle($size: 32px);
+      text-align: center;
+      color: $primary;
+
+    }
+  }
+}
+@keyframes hammer-anvil{
+to{
+  background-position: -6600px;
+}
+}

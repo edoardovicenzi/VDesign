@@ -1,0 +1,53 @@
+@use 'sass:string';
+@use 'sass:map';
+@use 'sass:list';
+@use 'variables' as *;
+
+$prefix: v !default;
+
+@mixin create-color-variants($color, $name){
+  @for $i from 0 to 10{
+  --#{$prefix}-#{$name}-opacity-0#{$i}: rgb($color, math.div($i, 10))
+  }
+}
+
+@mixin center-all{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin an-anchor-show-bar($duration: 150, $fn: ease-in-out) {
+  animation: active-bar-show #{$duration}ms $fn;
+}
+
+@mixin generateFontSrc($font-name,$extensions, $weight: ""){
+  $res: ();
+  @each $key, $value in $extensions{
+    $substring : url(quote(map.get($fonts, $font-name) + $font-name + #{$weight} + "." + #{$key})) format(quote(#{$value}));
+    $res: append($res, $substring , $separator: comma);
+      }
+      src: $res;
+      }
+
+@mixin generateBulkFontFaces($font-name, $font-weights: ("regular")){
+      @each $weight in $font-weights{
+      $weight-src-substring: "-" + unquote(string.to-upper-case(string.slice($weight,1, 1)) + string.to-lower-case(string.slice($weight, 2)));
+      @font-face{
+        font-family: quote($font-name);
+        @include generateFontSrc($font-name,$allowed-extensions, $weight: $weight-src-substring);
+        font-weight: map.get($font-weight-ref, $weight);
+      }
+
+    }
+
+}
+
+@mixin addFontStyle($family: FiraCode, $style: normal, $weight: 400, $size: 18px){
+  font-family: $family;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+}
+
+

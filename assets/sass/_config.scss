@@ -1,0 +1,16 @@
+@use 'sass:math';
+@use 'variables' as *;
+@use 'functions' as *;
+*, ::before, ::after{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+::root{
+  @include create-color-variants($primary, primary);
+  @include create-color-variants($secondary, secondary);
+}
+
+@include generateBulkFontFaces("FiraCode", $font-weights: ("regular", "bold", "light", "medium"));
+@include generateBulkFontFaces("GrandHotel");

@@ -1,0 +1,24 @@
+@use 'functions';
+@use 'variables' as *;
+
+
+body{
+  @include functions.addFontStyle();
+  color: $white;
+  background-color: $black;
+  position: relative;
+  user-select: none;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: $white;
+}
+
+button{
+  all: unset;
+}

@@ -1,0 +1,213 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::root {
+  --v-primary-opacity-00: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-01: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-02: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-03: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-04: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-05: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-06: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-07: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-08: rgb($color, math.div($i, 10)) ;
+  --v-primary-opacity-09: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-00: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-01: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-02: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-03: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-04: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-05: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-06: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-07: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-08: rgb($color, math.div($i, 10)) ;
+  --v-secondary-opacity-09: rgb($color, math.div($i, 10)) ;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/fira-code/FiraCode-Regular.woff") format("woff"), url("../fonts/fira-code/FiraCode-Regular.ttf") format("truetype"), url("../fonts/fira-code/FiraCode-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/fira-code/FiraCode-Bold.woff") format("woff"), url("../fonts/fira-code/FiraCode-Bold.ttf") format("truetype"), url("../fonts/fira-code/FiraCode-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/fira-code/FiraCode-Light.woff") format("woff"), url("../fonts/fira-code/FiraCode-Light.ttf") format("truetype"), url("../fonts/fira-code/FiraCode-Light.otf") format("opentype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "FiraCode";
+  src: url("../fonts/fira-code/FiraCode-Medium.woff") format("woff"), url("../fonts/fira-code/FiraCode-Medium.ttf") format("truetype"), url("../fonts/fira-code/FiraCode-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "GrandHotel";
+  src: url("../fonts/grand-hotel/GrandHotel-Regular.woff") format("woff"), url("../fonts/grand-hotel/GrandHotel-Regular.ttf") format("truetype"), url("../fonts/grand-hotel/GrandHotel-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+body {
+  font-family: FiraCode;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #FAFAFA;
+  background-color: #171717;
+  position: relative;
+  user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FAFAFA;
+}
+
+button {
+  all: unset;
+}
+
+header {
+  background-color: #33302C;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.main-navigation {
+  background-color: #33302C;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  transition-duration: 0.4s;
+  z-index: 999;
+}
+.main-navigation.open {
+  left: 0;
+}
+.main-navigation-divider {
+  height: 1px;
+  background-color: #FF8800;
+}
+.main-navigation-backdrop {
+  opacity: 0;
+  pointer-events: none;
+  transition-duration: 0.4s;
+}
+.main-navigation-backdrop.open {
+  position: fixed;
+  inset: 0;
+  opacity: 0.6;
+  pointer-events: all;
+  background-color: #171717;
+}
+
+.brand-name {
+  font-family: GrandHotel;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  color: #FF8800;
+}
+
+.page {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+section {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subsection-body {
+  position: relative;
+  width: max-content;
+}
+.subsection-body-mask {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to right, #171717, rgba(255, 136, 0, 0), #171717);
+}
+.subsection-body-list a {
+  transition: 0.2s;
+}
+.subsection-body-list a:hover {
+  scale: 2;
+}
+
+.under-construction {
+  position: relative;
+  margin: 0 auto;
+  height: 600px;
+  aspect-ratio: 1;
+  background: url("../img/sprites/under-construction.svg");
+  animation-name: hammer-anvil;
+  animation-duration: 1.2s;
+  animation-timing-function: steps(11);
+  animation-iteration-count: infinite;
+  scale: 0.5;
+}
+.under-construction::after {
+  content: "This page is currently under construction!";
+  position: absolute;
+  top: 100%;
+  margin: 2rem 0;
+  font-family: FiraCode;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  color: #FF8800;
+}
+
+@keyframes hammer-anvil {
+  to {
+    background-position: -6600px;
+  }
+}
+a.anchor-control {
+  border: 1px solid #FF8800;
+  border-radius: 50%;
+}
+a.anchor-inline-text {
+  color: #FF8800;
+}
+a.anchor-inline-text:hover {
+  text-decoration: underline;
+  color: #FF8800;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.btn-outline {
+  border: 1px solid #FF8800;
+  color: #FF8800;
+  transition: 0.2s;
+}
+.btn-outline:hover {
+  background-color: #FF8800;
+  color: #171717;
+}
+
+/*# sourceMappingURL=style.css.map */

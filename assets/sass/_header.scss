@@ -1,0 +1,52 @@
+@use 'functions';
+@use 'variables' as *;
+
+header{
+  background-color: $gray;
+  position: sticky;
+  top: 0;
+  left:0;
+}
+
+.main{
+  &-navigation{
+    background-color: $gray;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    transition-duration: 0.4s;
+    z-index: 999;
+
+    &.open{
+
+      left:0;
+    }
+
+    &-divider{
+      height: 1px;
+      background-color: $primary;
+    }
+    &-backdrop{
+      opacity: 0;
+      pointer-events: none;
+      transition-duration: 0.4s;
+
+      &.open{
+        position: fixed;
+        inset: 0;
+        opacity: 0.6;
+        pointer-events: all;
+        background-color: $black;
+      }
+    }
+  }
+}
+
+.brand{
+  &-name{
+    @include functions.addFontStyle($family:GrandHotel, $size:32px);
+    color: $primary;
+  }
+}
+
