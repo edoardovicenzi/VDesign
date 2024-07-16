@@ -11,15 +11,15 @@
 
         <link rel='stylesheet' href='../assets/css/icons/boxicons.min.css'>
         <link href='../assets/css/style.css' rel='stylesheet'>
-        <link rel='icon' type='image/x-icon' href='.../assets/img/icons/favicon.svg'>
+        <link rel='icon' type='image/x-icon' href='../assets/img/icons/favicon.svg'>
 
-        <script src="../assets/js/main.js" defer></script>
+        <script src='../assets/js/main.js' defer></script>
 
     </head>
-    <body>
+    <body class='d-flex flex-column vh-100'>
         <header class='coontainer-fluid row m-0 p-4'>
             <div class='col-4'>
-                <button type="button" id="toggle-nav">
+                <button type='button' id='toggle-nav'>
                     <img src='../assets/img/icons/HamburgerMenu.svg' alt='Toggle menu visibility'>
                 </button>
             </div>
@@ -32,9 +32,9 @@
 
 
             <nav class='main-navigation col-3 d-flex flex-column align-items-center gap-4 p-4'>
-                <div class="container-fluid row text-center gap-3">
+                <div class='container-fluid row text-center gap-3'>
                     <h2 class='brand-name'>VDesign</h2>
-                    <div class="main-navigation-divider"></div>
+                    <div class='main-navigation-divider'></div>
                 </div>
                 <ul class='main-navigation-list text-center d-flex flex-column gap-4 p-0'>
                     <li class='p-2 main-navigation-list-item'>
@@ -54,9 +54,36 @@
                     </li>
                 </ul>
             </nav>
-            <div class="main-navigation-backdrop"></div>
+            <div class='main-navigation-backdrop'></div>
         </header>
 
+
+        <div class='page h-100'>
+            <section id='section-email' class='hero-contact h-100'>
+                <div class='section-heading row'>
+                    <h2 class='col'>Write me!</h2> 
+                </div>
+                <form id='form-contact'>
+                    <div class="input-text">
+                        <label for="user_name">Your Name</label>
+                        <input type="text" id='user_name' name="user_name" value="">
+                    </div>
+                    <div class="input-text">
+                        <label for="user_email">Your email</label>
+                        <input type="email" id="user_email" name="user_email" value="">
+                    </div>
+                    <div class="input-text-area">
+                        <label for="message">Email body</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="checkbox" id='not-a-robot' name="not-a-robot" value="">
+                        <label for="not-a-robot">I am not a robot</label>
+                    </div>
+                    <button type="submit" class='btn btn-outline'>SEND MESSAGE</button>
+                </form>
+            </section>
+        </div>
 
     </body>
 </html>
