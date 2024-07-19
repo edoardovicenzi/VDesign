@@ -45,12 +45,3 @@ if (!page.children.length){
     page.innerHTML = "<div class='under-construction'></div>"
 }
 
-
-//handle contact form with emailJS
-
-//TODO: import emailJS the CDN
-//TODO: init email.js
-document.querySelector('#form-contact').addEventListener('submit', (e) => {
-    e.preventDefault()
-    //TODO: Insert emailjs.sendForm here
-})

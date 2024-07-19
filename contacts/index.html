@@ -13,7 +13,12 @@
         <link href='../assets/css/style.css' rel='stylesheet'>
         <link rel='icon' type='image/x-icon' href='../assets/img/icons/favicon.svg'>
 
+        <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
         <script src='../assets/js/main.js' defer></script>
+        <script src='./contacts.js' defer></script>
 
     </head>
     <body class='d-flex flex-column vh-100'>
@@ -31,7 +36,7 @@
             <div class='col-4'></div>
 
 
-            <nav class='main-navigation col-3 d-flex flex-column align-items-center gap-4 p-4'>
+            <nav class='main-navigation col-xl-3 col-6 d-flex flex-column align-items-center gap-4 p-4'>
                 <div class='container-fluid row text-center gap-3'>
                     <h2 class='brand-name'>VDesign</h2>
                     <div class='main-navigation-divider'></div>
@@ -63,27 +68,46 @@
                 <div class='section-heading row'>
                     <h2 class='col'>Write me!</h2> 
                 </div>
-                <form id='form-contact'>
-                    <div class="input-text">
-                        <label for="user_name">Your Name</label>
-                        <input type="text" id='user_name' name="user_name" value="">
+                <form id='form-contact' class="row px-5" method="POST">
+                    <div class="input-component-text col-xl-6 offset-xl-3">
+                        <input type="text" id='user_name' name="user_name" placeholder="Your name goes here" required>
+                        <label for="user_name">Your name</label>
                     </div>
-                    <div class="input-text">
+                    <div class="input-component-text col-xl-6 offset-xl-3">
+                        <input type="email" id="user_email" name="user_email" placeholder="Your email goes here" required>
                         <label for="user_email">Your email</label>
-                        <input type="email" id="user_email" name="user_email" value="">
                     </div>
-                    <div class="input-text-area">
+                    <div class="input-component-text col-xl-6 offset-xl-3">
+                        <textarea id="message" name="message" placeholder="Your message goes here" required></textarea>
                         <label for="message">Email body</label>
-                        <textarea id="message" name="message"></textarea>
                     </div>
-                    <div class="input-checkbox">
-                        <input type="checkbox" id='not-a-robot' name="not-a-robot" value="">
-                        <label for="not-a-robot">I am not a robot</label>
+                    <div class="input-checkbox d-flex justify-content-center my-2 col-xl-6 offset-xl-3">
+                        <label class="input-checkbox-label" for="not-a-robot">
+                            <input type="checkbox" id='not-a-robot' name="not-a-robot" required>
+                            <span class="input-checkbox-label-checkmark"></span>
+                            <span class="input-checkbox-label-content">I am not a robot</span>
+                        </label>
                     </div>
-                    <button type="submit" class='btn btn-outline'>SEND MESSAGE</button>
+                    <div class="d-flex justify-content-center my-4">
+                        <button type="submit" class='btn btn-outline'>SEND MESSAGE</button>
+                    </div>
                 </form>
             </section>
+            <div class="toast-container bottom-0 end-0 p-3">
+                <div id="form-toast" class="toast text-bg-dark" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header text-bg-dark">
+                        <img src="../assets/img/icons/favicon.svg" class="rounded me-2" alt="...">
+                        <strong class="me-auto">VDesign</strong>
+                        <small class="toast-time">11 mins ago</small>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Email sent successfully!
+                    </div>
+                </div>
+            </div>
         </div>
+
 
     </body>
 </html>
