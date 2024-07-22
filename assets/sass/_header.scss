@@ -9,6 +9,7 @@ header{
 }
 
 .main{
+  $-navigation-index: 999;
   &-navigation{
     background-color: $gray;
     position: fixed;
@@ -16,8 +17,21 @@ header{
     left: -100%;
     height: 100%;
     transition-duration: 0.4s;
-    z-index: 999;
+    z-index: $-navigation-index;
 
+    &-list{
+
+      &-item{
+
+        & a{
+
+          transition: color 150ms ease-in-out;
+          &:hover{
+            color: $primary;
+          }
+        }
+      }
+    }
     &.open{
 
       left:0;
@@ -38,6 +52,7 @@ header{
         opacity: 0.6;
         pointer-events: all;
         background-color: $black;
+        z-index: $-navigation-index - 1;
       }
     }
   }

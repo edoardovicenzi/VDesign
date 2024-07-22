@@ -92,6 +92,12 @@ header {
   transition-duration: 0.4s;
   z-index: 999;
 }
+.main-navigation-list-item a {
+  transition: color 150ms ease-in-out;
+}
+.main-navigation-list-item a:hover {
+  color: #FF8800;
+}
 .main-navigation.open {
   left: 0;
 }
@@ -110,6 +116,7 @@ header {
   opacity: 0.6;
   pointer-events: all;
   background-color: #171717;
+  z-index: 998;
 }
 
 .brand-name {
