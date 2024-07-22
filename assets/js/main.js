@@ -1,7 +1,3 @@
-//Handle route (for github pages only)
-
-initializeMenuAnchorsHref()
-
 //Handle open/close nav bar
 
 initializeMenuListeners()
@@ -19,14 +15,6 @@ checkWorkInProgressPage()
 
 
 //Utility functions
-
-function initializeMenuAnchorsHref(){
-    try {
-        document.querySelector('base').setAttribute('href', window.location.pathname)
-    } catch (error) {
-        console.error('In initializeMenuAnchorsHref:', error.message) 
-    }
-}
 
 function initializeMenuListeners(params) {
    try {
