@@ -10,14 +10,29 @@ emailjs.init({
 const FORM = document.getElementById('form-contact')
 FORM.addEventListener('submit', (e) => {
     e.preventDefault()
+    handleSubmitter(e.submitter, true)
     emailjs.sendForm('vdesign_contact_service', 'contact_form', FORM)
         .then(() => {
             handleToast('success')
+            handleSubmitter(e.submitter, false)
         }, (error) => {
                 handleToast('error')
+                handleSubmitter(e.submitter, false)
             });
 })
 
+function handleSubmitter(node, disable = true) {
+    if (disable){
+        node.setAttribute('disabled',true)
+        node.querySelector('.btn-description').classList.add('invisible')
+        node.querySelector('.btn-spinner').classList.remove('d-none')
+    }
+    else{
+        node.removeAttribute('disabled')
+        node.querySelector('.btn-description').classList.remove('invisible')
+        node.querySelector('.btn-spinner').classList.add('d-none')
+    }
+}
 
 function handleToast(result){
     //Generate a custom message based on the result

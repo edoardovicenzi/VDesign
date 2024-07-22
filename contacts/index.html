@@ -96,7 +96,14 @@
                         </label>
                     </div>
                     <div class="d-flex justify-content-center my-4">
-                        <button type="submit" class='btn btn-outline'>SEND MESSAGE</button>
+                        <button type="submit" class='btn btn-outline position-relative'>
+                            <span class='btn-description'>SEND MESSAGE</span>
+                            <div class="btn-spinner text-center d-none position-absolute top-50 start-50 translate-middle">
+                                <div class="spinner-border spinner-border-sm" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                            </div>
+                        </button>
                     </div>
                 </form>
             </section>
