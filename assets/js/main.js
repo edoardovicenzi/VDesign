@@ -22,11 +22,11 @@ checkWorkInProgressPage()
 
 function initializeMenuAnchorsHref(){
     try {
-        const anchors = document.querySelector('.main-navigation-list').querySelectorAll('li a')
-        for (const anchor of anchors){
-            anchor.href = window.location.pathname + anchor.href
-        }
-
+        // const anchors = document.querySelector('.main-navigation-list').querySelectorAll('li a')
+        // for (const anchor of anchors){
+        //     anchor.href = window.location.pathname + anchor.href
+        // }
+        document.querySelector('base').href = window.location.pathname
     } catch (error) {
         console.error('In initializeMenuAnchorsHref:', error.message) 
     }
