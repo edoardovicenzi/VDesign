@@ -10,10 +10,6 @@ populateSubsectionIcons()
 
 checkWorkInProgressPage()
 
-
-
-
-
 //Utility functions
 
 function initializeMenuListeners(params) {
