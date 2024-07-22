@@ -8,7 +8,7 @@ populateSubsectionIcons()
 
 //Check if the page is under construction by evaluating if the .page element has or not children
 
-checkWorkInProgressPage()
+setWorkInProgressPage()
 
 //Utility functions
 
@@ -50,15 +50,15 @@ function populateSubsectionIcons(){
     }
 }
 
-function checkWorkInProgressPage(params) {
+function setWorkInProgressPage() {
     try {
-        const page = document.querySelector('.page')
+        const page = document.querySelector('#page')
 
-        if (!page.children.length){
+        if (!page.children.length || page.classList.contains('is-under-construction')){
             page.innerHTML = "<div class='under-construction'></div>"
         }
     } catch (error) {
-        console.error('In checkWorkInProgressPage:', error.message) 
+        console.error('In setWorkInProgressPage:', error.message) 
     } 
 }
 
