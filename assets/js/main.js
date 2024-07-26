@@ -32,20 +32,19 @@ function initializeMenuListeners(params) {
    } 
 }
 
-function populateSubsectionIcons(){
+async function populateSubsectionIcons(){
+    const response = await fetch("/assets/data/external-urls.json");
+    const externalUrls = await response.json();
     try {
-        fetch('../assets/data/external-urls.json')
-            .then((response) => response.json())
-            .then((data) => {
-                //get all img in subsection-body, which are wrappers for the icon
-                for (const imgTag of document.querySelectorAll('.subsection-body a img')){
-                    let imageName = imgTag.src.match(/(?<name>\w+)\.svg/).groups.name.toLowerCase();
-                    imgTag.parentElement.setAttribute('href', data.filter((el) => el.name == imageName)[0].url??"")
-                }
-            })  
-            .catch((err) => console.error("Fetch request went wrong: ", err));
 
-    } catch (error) {
+        //get all img in subsection-body, which are wrappers for the icon externalUrls
+        for (const imgTag of document.querySelectorAll('.subsection-body a img')){
+            let imageName = imgTag.src.match(/(?<name>\w+)\.svg/).groups.name.toLowerCase();
+            imgTag.parentElement.setAttribute('href', externalUrls.filter((el) => el.name == imageName)[0].url??"")
+        }
+
+    } 
+     catch (error) {
         console.error('In populateSubsectionIcons:', error.message) 
     }
 }
