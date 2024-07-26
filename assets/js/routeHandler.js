@@ -1,38 +1,42 @@
 //Handle route (for github pages only)
-
-
 //Change only this 2 constants to get it working
 
 const GITHUB_NAME = 'edoardovicenzi'
 const GITHUB_REPOSITORY_NAME = 'VDesign'
 
-addEventListener("DOMContentLoaded", (event) => {
 
-    //Check if we are using github pages
-    if (window.location.origin.indexOf('github.io') > 0){
-        initializeGithubBase(GITHUB_NAME, GITHUB_REPOSITORY_NAME)
-    }
-    //Otherwise setup for local dev environment
-    else{
-        initializeBase()
-    }
-});
 
-// Append the base child on the head
-function initializeBase() {
-        const baseTag = document.createElement('base')
-        baseTag.href= '/'
-        document.querySelector('head').appendChild(baseTag)
+export default function setBase(){
+    const baseURL = initializeGithubBase(GITHUB_NAME, GITHUB_REPOSITORY_NAME)
+
+    const baseTag = document.createElement('base')
+    //Update the href
+    baseTag.href= baseURL
+    // Append the base child on the head
+    document.querySelector('head').appendChild(baseTag)
 }
 
-function initializeGithubBase(githubName = '', githubRepoName = '') {
+
+
+export function initializeGithubBase(githubName = '', githubRepoName = '') {
     try {
-        if ((githubName && githubRepoName) && (typeof githubName == 'string' && typeof githubRepoName == 'string')){
-            const baseTag = document.createElement('base')
-            baseTag.href=`https://${githubName}.github.io/${githubRepoName}/`
-            document.querySelector('head').appendChild(baseTag)
+        const isGithub = window.location.origin.indexOf('github.io') > 0
+        //if we are using github
+        if (isGithub){
+            //Sanitize to see if the constants are string
+            if (typeof githubName == 'string' && typeof githubRepoName == 'string'){
+
+                //Sanitize to see if the constants are not null or empty
+                if (githubName != '' && githubName != null && githubRepoName != '' && githubRepoName != null){
+                    return `https://${githubName}.github.io/${githubRepoName}/`
+                }
+            }
+
         }
-        else throw new TypeError('TypeError: Wrong parameter type passed or missing.')
+        else {
+            //the defaut behaviour is to return "/"
+            return "/"
+        }
         
     } catch (error) {
         console.assert(githubName && githubRepoName,'In initializeBase.\nExited with error message'+ error.message +'\nEntered with value:',`\nGithub Name: ${githubName ? githubName :'__MISSING__'}`,`\nGithub Repository Name: ${githubRepoName? githubRepoName : 'MISSING'}` )

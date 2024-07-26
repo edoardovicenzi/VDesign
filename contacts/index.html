@@ -17,8 +17,8 @@
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
         </script>
-        <script src='../assets/js/routeHandler.js' defer></script>
-        <script src='../assets/js/main.js' defer></script>
+        <script type='module' src='../assets/js/routeHandler.js' defer></script>
+        <script type='module' src='../assets/js/main.js' defer></script>
         <script src='./contacts.js' defer></script>
     </head>
     <body class='d-flex flex-column vh-100'>
@@ -99,7 +99,7 @@
                         <button type="submit" class='btn btn-outline position-relative'>
                             <span class='btn-description'>SEND MESSAGE</span>
                             <div class="btn-spinner text-center d-none position-absolute top-50 start-50 translate-middle">
-                                <div class="spinner-border spinner-border-sm" role="status">
+                                <div class="spinner-border spinner-border" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
                             </div>
