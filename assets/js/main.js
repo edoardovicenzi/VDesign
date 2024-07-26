@@ -1,3 +1,8 @@
+import setBase, { BaseRoute, GITHUB_NAME, GITHUB_REPOSITORY_NAME } from "./routeHandler.js";
+// Initialize base tag
+addEventListener("DOMContentLoaded", (event) => {
+    setBase()
+});
 //Handle open/close nav bar
 
 initializeMenuListeners()
@@ -33,7 +38,8 @@ function initializeMenuListeners(params) {
 }
 
 async function populateSubsectionIcons(){
-    const response = await fetch("/assets/data/external-urls.json");
+    const url = new BaseRoute(GITHUB_NAME, GITHUB_REPOSITORY_NAME).baseUrl
+    const response = await fetch(`${url}assets/data/external-urls.json`);
     const externalUrls = await response.json();
     try {
 
