@@ -233,6 +233,7 @@ textarea.form-control {
 }
 
 .input-component-text {
+  position: relative;
   display: flex;
   justify-content: start;
   align-items: flex-start;
